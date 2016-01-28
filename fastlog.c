@@ -547,9 +547,10 @@ PHP_RSHUTDOWN_FUNCTION(fastlog)
  */
 PHP_MINFO_FUNCTION(fastlog)
 {
-	php_info_print_table_start();
-	php_info_print_table_header(2, "FastLog support", "enabled");
-	php_info_print_table_end();
+	php_info_print_table_start(); //开始phpinfo表格。无参数。
+	php_info_print_table_header(2, "FastLog support", "enabled"); //输出表格头。第一个参数是整形，指明头的列数，然后后面的参数是与列数等量的(char*)类型参数用于指定显示的文字。
+	//php_info_print_table_row()——输出表格内容。第一个参数是整形，指明这一行的列数，然后后面的参数是与列数等量的(char*)类型参数用于指定显示的文字。
+	php_info_print_table_end();//结束phpinfo表格
 
 	/* Remove comments if you have entries in php.ini
 	DISPLAY_INI_ENTRIES();
